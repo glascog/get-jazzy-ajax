@@ -7,48 +7,11 @@ const app = express();
 const PORT = 5000;
 
 // This is the array that contains objects of artists that lives on our server
-const artistListArray = [
-    {
-        name: 'Miles Davis',
-        born: 1926,
-        died: 1990,
-    },
-    {
-        name: 'Duke Ellington',
-        born: 1899,
-        died: 1974,
-    },
-    {
-        name: 'John Coltrane',
-        born: 1926,
-        died: 1987,
-    },
-    {
-        name: 'Louis Daniel Armstrong',
-        born: 1901,
-        died: 1971,
-    },
-];
+let artistListArray = require('./server/modules/artist.js')
+let songListArray = require('./server/modules/song.js')
 
 // This is the array of song objects that lives on our server
-const songListArray = [
-    {
-        title: 'Take Five',
-        artist: 'The Dave Brubeck Quartet',
-    },
-    {
-        title: 'So What',
-        artist: 'Miles Davis',
-    },
-    {
-        title: 'Sing Sing Sing',
-        artist: 'Benny Goodman',
-    },
-    {
-        title: 'Take the "A" Train',
-        artist: 'The Dave Brubeck Quartet',
-    },
-];
+
 
 // This tells express to deliver static code from our server to the DOM
 // gives access to files in our server at the public folder
